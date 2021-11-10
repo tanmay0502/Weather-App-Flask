@@ -64,6 +64,3 @@ def pre():
         btnPress= 1
         return render_template('wData.html', write=say, btnPress=btnPress,btnRem=btnRem,say0=say0,para1=para1)
     return render_template('wData.html',btnRem=btnRem)
-
-if __name__ == '__main__':
-    app.run()
