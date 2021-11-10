@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Weather</title>
+    <style>
+
+        body{
+            /* position: relative; */
+            margin: 0%;
+            align-items: center;
+            text-align: center;
+            background-image: linear-gradient(to right,rgb(160, 248, 244),white,rgb(160, 248, 244)) ;
+        }
+        .title{
+            margin-top: 170px;
+            font-size: 450%;
+            margin-bottom: 0px;
+            background-image: linear-gradient(to right, rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(62, 159, 250, 0.719),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0)); 
+            border: none;
+        }
+        .sub{
+            margin-top: 0px;
+            padding-top: 10px;
+            font-size: 220%;
+            background-image: linear-gradient(to right, rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(62, 159, 250, 0.719),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0),rgba(220, 20, 60, 0));
+            margin-bottom: 0%;
+        }
+        .premium{
+            margin: 20px;
+            border-radius: 5%;
+            font-size: 20px;
+            border-color: rgb(207, 207, 255) ;
+        }
+        .image{
+            position: relative;
+            width: 100px;
+            height:100px
+        }
+        .section{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 25px;
+            background-image: linear-gradient(to right,#a0d7fc00,#a0d7fc,#a0d7fc00 );
+            margin: 0% 30%;
+        }
+        .section:hover{
+            background-image: linear-gradient(to right,#a0d7fc00,#75c8ff,#a0d7fc00);
+            border-radius: 100px;
+            border-color: black;
+            border-width: 20px;
+            box-shadow: rgb(97, 72, 34);
+        }
+        .box{
+            position: absolute ;
+            width: 18px;
+            height: 18px;
+            margin-top: 4px;
+        }
+        .box:hover{
+            width: 22px;
+            height: 22px;
+        }
+        .box:focus{
+            width: 23px;
+            height:23px;
+        }
+        .input{
+            background-color: rgb(175, 211, 245);
+            position: relative;
+            width: 170px;
+            height: 50px;
+            border-radius: 6px;
+            border-color: blue;
+            font-size: 20px;
+        }
+        .input:hover{
+            background-color: rgb(193, 230, 251);
+            box-shadow: none;
+            width: 175px;
+            height: 50px;
+        }
+        .input::placeholder{
+            font-size: 20px;
+        }
+        .lgo{
+            width: 80px;
+            height: 40px;
+
+        }
+        .img1{
+            position: absolute;
+            top: 5px;
+            left: 835px; 
+            display: inline-block ;
+            width: 250px;
+            height: 250px;
+        }
+        .img2{
+            position: absolute;
+            top: 220px;
+            left: 400px;
+            display: inline-block ;
+            width: 200px;
+            height: 200px;
+        }
+        .img3{
+            position: relative;
+            top: 50px;
+            left: 900px;
+            display: inline-block ;
+            width: 100px;
+            height: 70px;
+
+        }
+        .img4{
+            position:absolute;
+            top: 220px;
+            left: 1300px;
+            width: 200px;
+            height: 200px;
+            display: inline-block ;
+        }
+        .img5{
+            position: absolute;
+            top: 400px;
+            left: 1400px;
+            display: inline-block ;
+            width: 350px;
+            height: 350px;
+
+        }
+        .img6{
+            position: absolute;
+            top: 700px;
+            left: 1300px;
+            display: inline-block ;
+            width: 160px;
+            height: 160px;
+        }
+        .img7{
+            position: absolute;
+            top: 700px;
+            left: 400px;
+            display: inline-block ;
+            width: 150px;
+            height: 150px;
+        }
+        .img8{
+            position: absolute;
+            top: 450px;
+            left: 200px;
+            display: inline-block ;
+            width: 200px;
+            height: 200px;
+        }
+        .img1:hover{
+            width: 270px;
+            height: 270px;
+        }
+        .img2:hover{
+            width: 210px;
+            height: 210px;
+        }
+        .img3:hover{
+            width: 110px;
+            height: 80px;
+        }
+        .img4:hover{
+            width: 210px;
+            height: 210px;
+        }
+        .img5:hover{
+            width: 370px;
+            height: 370px;
+        }
+        .img6:hover{
+            width: 170px;
+            height: 170px;
+        }
+        .img7:hover{
+            width: 160px;
+            height: 160px;
+        }
+        .img8:hover{
+            width: 210px;
+            height: 210px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="image">
+            <img src="/static/andr.png" alt="ico" class="img1">
+            <img src="/static/8.png" alt="ico" class="img8"> 
+            <img src="/static/2.png" alt="ico" class="img2">
+            <!-- <img src="/static/3.png" alt="ico" class="img3"> -->
+            <img src="/static/4.png" alt="ico" class="img4"> 
+            <img src="/static/5.png" alt="ico" class="img5">
+            <img src="/static/6.png" alt="ico" class="img6">
+            <img src="/static/7.png" alt="ico" class="img7">
+        </div>
+        <div class="container">
+            <h1 class="title">
+                Know Weather
+            </h1>
+            <h2 class="sub"> of any City in the world!</h2>
+        </div>
+    </section>
+    <section class="section">
+            {%if para1 is number%}
+            <form method="POST" action="/">
+                    <div class="main">
+                        <p>Choose parameters which u wish to see:</p>
+                                <p>Temperature<input class="box"type="checkbox" value="0" name="box" checked></p> 
+                                <p>Humidity<input class="box" type="checkbox" value="1" name="box"checked></p> 
+                                <p>Wind<input class="box" type="checkbox" value="2"name="box"> </p>
+                                
+                                {%if btnPress is number %}
+                                    <p> Min,Max Temperature, Feels Like<input type="checkbox" class="box" value="3"name="box" checked></p>
+                                    <p hidden>Sunrise and Sunset<input type="checkbox"class="box" value="4"name="box"></p>
+                                   <p>Visibility <input class="box" type="checkbox" value="5"name="box"></p> 
+                                    <p>Pressure <input class="box" type="checkbox" value="6"name="box"></p> 
+                                {% endif %}
+                                </form>
+                                <p><input class="input" name="cityName" type="text" placeholder="Enter a Valid City" style="text-transform: capitalize;"></p>
+                                    <p ><button class="lgo">
+                                        Let's Go
+                                    </button></p>
+                                    {%endif%}
+                                    <p>{{city1}}{{city}}</p>
+                                    <p>{% for para in show %}</p>
+                                    <p>{{para}}</p>
+                                    <p>{% endfor %}</p>
+                    </div>
+            {% if btnRem is number %}
+            </form>
+            <p>{{message1}}</p>
+            <p>{{message2}}</p>
+            <form action="/premium" method="POST"><div >
+                <button class="premium" type="submit">Get Premium</button> 
+                </div>
+            {% endif %}
+                <p>{{say0}}</p>
+                <p>{{write}} </p>
+
+            </form>
+    </section>
+</body>
+</html>
